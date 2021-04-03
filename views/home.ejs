@@ -1,0 +1,12 @@
+<%-include("partials/header");-%>
+<!-- copied file path from left side bar is "partials\header" whilst actual path is "partials/header" -->
+<h1>Home</h1>
+<p><%= varToUseInHomeEJS %></p>
+
+<%varForNewContent.forEach(function(post){%>
+<h1><%= post.title %></h1>
+<p><%= post.input.substr(0,100)  %><a href="/posts/<%=post.title%>">...Read More</a></p>
+<%});%>
+
+
+<%-include("partials/footer");-%>
